@@ -1,600 +1,523 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<link href="https://blogger.googleusercontent.com/img/a/AVvXsEhdbj3TgRkrG6o-1SO9qsz8JopDPx2wN0TZLb5NG_-0kJl4sVz_HciMkmYoSmtauHlpRULMsniXt8JBITBi187T7Ul6uVS-9POuu4ui9tk73UFLnNrsFv3KwigBlR57PuuCA8z-E6Qrs_la4XotZo1UYVyWgg3FgJad2bZ9T4WAY8T-aLak73KjocRcTVHU" rel="icon" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!DOCTYPE html>
+	<html lang="id">
+	<head>
+	<link href="https://blogger.googleusercontent.com/img/a/AVvXsEg-hsZnAd9n2HDbusR6pDk4XvwAqK9yhG-RxIFRL3Eh3NVBTX82Yz-HU17iKU0UqbSG3FCjVSVCh5l5sy8tqZDOUKJKhSjEW3u9YzWSuD-pg3L4KGJQhsUvWXnwl4I4HjM8Hi965BQmea6rqL_LKLFqk_6n97yYXhNx_BzDOnRFdzwr1kIo5xxKSNnEN8x6" rel="icon" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jadwal Pertandingan & Prediksi Bola - PIALA DUNIA 2026</title>
+	<title>Jadwal Pertandingan & Prediksi Bola</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', Arial, sans-serif;
-}
-
-body{
-    min-height:100vh;
-    overflow-x:hidden;
-    background: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url('https://blogger.googleusercontent.com/img/a/AVvXsEhGJIGUrO1-W2v952nSps1QKVzblSv5N_5--Vs2z6SNRhQx7NlZ_9lXdYxNP9avXi5erszrNe2g8DAiTze83WDAaK5vJYs3I8vxlBugdefVFw3Pd8pJ4jcx5TuTKTrQNSaGlOyCHqbr3B2la6-McsRbww9SLcLDcCX7DMM6fif1UyqgtuBu5EPL5FUC_Xc') center center fixed;
-    background-size:cover;
-    color:#fff;
-}
-
-/* HERO AREA */
-.hero{
-    position:relative;
-    height:280px;
-    background:url('https://blogger.googleusercontent.com/img/a/AVvXsEj1HWriANZqBRBsz_o1745j2Gs5kLNigfN4DqP9uKID-PHQEUiJ_lVI4fX1QFOxwpIuXWUxOUPQM5lv4TTnycnY_UlUQdl1snU1mfcSEIsL3fQXLQDhR_ta2I8lKjOaYl9GeaKVgp-TwpuSzLvSQ5j4fQy2fRl-Aey3uqakePkVdH_LvkjO1CRSFoZsHyU') center center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.6);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    text-align:center;
-    padding:20px;
-}
-
-.hero-content h1{
-    font-size:32px;
-    font-weight:900;
-    margin-bottom:10px;
-    text-shadow: 0 0 10px rgba(255,215,0,0.5);
-}
-
-.hero-content p{
-    color:#ddd;
-    font-size:15px;
-    font-weight: 600;
-}
-
-/* LOGIN BUTTON */
-.login-btn{
-    position:absolute;
-    top:15px;
-    right:15px;
-    z-index:99;
-    text-decoration:none;
-    background:#00a2ff;
-    color:#fff;
-    padding:10px 18px;
-    border-radius:30px;
-    font-weight:bold;
-    transition: .3s;
-}
-
-.login-btn:hover {
-    background: #0082cc;
-    transform: scale(1.05);
-}
-
-/* MAIN CONTAINER */
-.container{
-    width:95%;
-    max-width:700px;
-    margin: 20px auto;
-    padding:25px;
-    backdrop-filter:blur(8px);
-    background:rgba(0,0,0,.45);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:25px;
-    box-shadow:0 0 30px rgba(255,215,0,.1);
-}
-
-.logo-top{
-    font-size:16px;
-    font-weight:700;
-    color:#ffd700;
-    letter-spacing:3px;
-    margin-bottom:15px;
-    text-align: center;
-    animation:pulse 2s infinite;
-}
-
-.hero-logo img{
-    max-width: 200px;
-    width: 90%;
-    filter: drop-shadow(0 0 15px rgba(255,215,0,.8));
-    display: block;
-    margin: 0 auto 20px auto;
-}
-
-/* RUNNING TEXT / MARQUEE */
-.running-text {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    background: rgba(0,0,0,0.65);
-    padding: 12px 0;
-    border-radius: 12px;
-    border: 1px solid rgba(250, 171, 12, 0.3);
-    margin: 15px 0;
-}
-
-.running-text span {
-    display: inline-block;
-    padding-left: 100%;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 15px;
-    animation: marquee 22s linear infinite;
-}
-
-@keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
-/* SLIDER MATCH STYLE */
-.slider-container{
-    position:relative;
-    margin:25px 0;
-    overflow:hidden;
-    border-radius:20px;
-    background:rgba(0,0,0,.65);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.1);
-}
-
-.slider{
-    display:flex;
-    transition:transform .6s ease;
-}
-
-.slide{
-    min-width:100%;
-    padding:25px;
-    text-align:center;
-}
-
-.slide-title{
-    font-size:14px;
-    font-weight:700;
-    color:#fff;
-    margin-bottom:5px;
-    letter-spacing: 1px;
-}
-
-.slide-time{
-    font-size:18px;
-    font-weight:800;
-    color:#ffd700;
-    margin-bottom:15px;
-}
-
-.match{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-}
-
-.team{
-    width:32%;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.team img{
-    width:65px;
-    height:65px;
-    object-fit:contain;
-    margin-bottom:8px;
-}
-
-.score-box{
-    width:36%;
-    text-align:center;
-}
-
-.score{
-    font-size:38px;
-    font-weight:800;
-    color:#fff;
-    margin-bottom:10px;
-    letter-spacing: 2px;
-}
-
-.bet-now{
-    display:inline-block;
-    padding:10px 22px;
-    background:linear-gradient(45deg,#b8860b,#ffd700);
-    color:#000;
-    font-weight:800;
-    border-radius:10px;
-    text-decoration:none;
-    transition: .3s;
-    box-shadow: 0 4px 15px rgba(255,215,0,0.3);
-}
-
-.bet-now:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px gold;
-}
-
-.arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:40px;
-    height:40px;
-    border:none;
-    border-radius:50%;
-    background:rgba(255,255,255,.15);
-    color:#fff;
-    font-size:18px;
-    cursor:pointer;
-    z-index:10;
-    transition: .3s;
-}
-
-.arrow:hover { background: rgba(255,255,255,0.3); }
-.prev{ left:10px; }
-.next{ right:10px; }
-
-/* DOTS SLIDER */
-.dots{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-    padding-bottom:15px;
-}
-
-.dot{
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    background:#555;
-    cursor:pointer;
-    transition: .3s;
-}
-
-.dot.active{
-    background:#ffd700;
-    box-shadow:0 0 10px gold;
-}
-
-/* JADWAL & PREDIKSI LIST */
-.judul{
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-    margin:25px 0 15px 0;
-    color: #ffd700;
-    border-bottom: 2px solid rgba(250, 171, 12, 0.4);
-    padding-bottom: 8px;
-}
-
-.match-card{
-    background:#1e1e1e;
-    border-left:4px solid #faab0c;
-    border-radius:10px;
-    padding:14px;
-    margin-bottom:12px;
-    text-align: left;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-right: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.match-time{
-    color:#ffd700;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:6px;
-}
-
-.match-team{
-    font-size:16px;
-    font-weight:bold;
-    line-height:1.4;
-    margin-bottom:6px;
-    color: #fff;
-}
-
-.match-league{
-    color:#bbb;
-    font-size:12px;
-    margin-bottom:10px;
-}
-
-.match-score{
-    display:inline-block;
-    background:#faab0c;
-    color: #000;
-    padding:6px 12px;
-    border-radius:6px;
-    font-weight:bold;
-    font-size: 13px;
-}
-
-/* BANNER & PROMO AREA */
-.separator-banner {
-    text-align: center;
-    margin: 25px 0;
-}
-
-.separator-banner img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* FLOATING SOSMED BUTTON */
-.sosmed-container{
-    position:fixed;
-    left:15px;
-    bottom:20px;
-    z-index:999999;
-}
-
-#btnSosmed{
-    width:60px;
-    height:60px;
-    border:none;
-    border-radius:15px;
-    background:#111;
-    color:#faab0c;
-    font-size:30px;
-    cursor:pointer;
-    box-shadow:0 4px 10px rgba(0,0,0,.4);
-    transition: .3s;
-}
-
-#btnSosmed:hover { transform: scale(1.05); }
-
-.sosmed-text{
-    position:absolute;
-    left:70px;
-    bottom:10px;
-    width:170px; 
-    background:#faab0c;
-    color:#fff;
-    padding:5px;
-    border-radius:8px;
-    font-size:12px;
-    font-weight:bold;
-}
-
-.sosmed-menu{
-    display:none;
-    margin-bottom:10px;
-}
-
-.sosmed-menu a{
-    display:block;
-    background:#fff;
-    color:#000;
-    padding:10px;
-    margin-bottom:5px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size: 13px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-/* ANIMATIONS */
-@keyframes pulse{
-    0%,100%{opacity:1;}
-    50%{opacity:.6;}
-}
-
-/* MOBILE RESPONSIVE */
-@media(max-width:768px){
-    .hero{ height:200px; }
-    .hero-content h1{ font-size:22px; }
-    .hero-content p{ font-size:13px; }
-    .judul{ font-size:18px; }
-    .match-team{ font-size:14px; }
-    .score { font-size: 32px; }
-    .team img { width: 55px; height: 55px; }
-}
-
-/* ==========================================================================
-   FIFA BRACKET TOURNAMENT STYLES (MATCHED THEME)
-   ========================================================================== */
-
-/* Container Utama Bagan */
-.fifa-bracket-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 25px;
-    margin: 25px 0;
-    gap: 20px;
-    overflow-x: auto;
-    width: 100%;
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.05);
-}
-
-/* Sisi Kiri dan Kanan Bagan */
-.fifa-bracket-side {
-    display: flex;
-    gap: 25px;
-    flex: 1;
-}
-
-.fifa-left-side {
-    flex-direction: row;
-}
-
-.fifa-right-side {
-    flex-direction: row-reverse; /* Membalik urutan ronde khusus sisi kanan */
-}
-
-/* Setiap Kolom Ronde */
-.fifa-round {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 20px;
-    min-width: 160px;
-}
-
-/* Container Pertandingan + Kode */
-.fifa-match-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    width: 100%;
-}
-
-/* Kotak Pertandingan */
-.fifa-match-box {
-    background: #1e1e1e;
-    border-left: 3px solid #faab0c;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-/* Waktu Pertandingan */
-.fifa-match-time {
-    font-size: 11px;
-    color: #ffd700;
-    font-weight: bold;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 4px;
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
-}
-
-/* Baris Tim */
-.fifa-team {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: bold;
-    color: #fff;
-    padding: 3px 0;
-}
-
-/* Bendera Negara */
-.fifa-team img {
-    width: 20px;
-    height: 14px;
-    object-fit: cover;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-/* Kotak Abu-abu Pengganti Bendera (Belum Lolos) */
-.fifa-placeholder-flag {
-    width: 20px;
-    height: 14px;
-    background-color: #333;
-    border-radius: 2px;
-    border: 1px dashed rgba(255,255,255,0.2);
-}
-
-/* Text Pengganti Tim (W74, RU101, dll) */
-.fifa-placeholder {
-    color: #777;
-    font-weight: 500;
-}
-
-/* Kode Unik Pertandingan (M74, M73, dll) */
-.fifa-match-code {
-    font-size: 11px;
-    background: linear-gradient(45deg, #b8860b, #ffd700);
-    color: #000;
-    padding: 3px 6px;
-    border-radius: 5px;
-    font-weight: 800;
-    min-width: 38px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
-}
-
-/* Area Tengah (Final & Juara 3) */
-.fifa-bracket-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    min-width: 200px;
-}
-
-/* Kotak Khusus Final & Juara 3 */
-.fifa-center-box {
-    width: 100%;
-    background: rgba(30, 30, 30, 0.9);
-    padding: 15px;
-    border: 2px solid #ffd700;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
-}
-
-.fifa-center-box h4 {
-    margin: 0 0 10px 0;
-    font-size: 14px;
-    color: #ffd700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(255,215,0,0.3);
-}
-
-/* Kode Semi-Final di Bagian Atas Tengah */
-.fifa-semi-final-codes {
-    display: flex;
-    gap: 30px;
-    font-size: 12px;
-    color: #ffd700;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* RESPONSIVE UNTUK LAYAR KECIL */
-@media(max-width: 768px) {
-    .fifa-bracket-wrapper {
-        padding: 15px;
-        gap: 15px;
-    }
-    .fifa-round {
-        min-width: 140px;
-        gap: 15px;
-    }
-    .fifa-team {
-        font-size: 12px;
-    }
-    .fifa-match-code {
-        font-size: 10px;
-        padding: 2px 4px;
-    }
-}
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		font-family: Arial, sans-serif;
+	}
+
+	body{
+		background:url('https://i.ibb.co/Ps1cCXTM/image.png') center center fixed;
+		background-size:cover;
+		color:#fff;
+	}
+
+	/* HERO PINTARBOLA */
+	.hero{
+		position:relative;
+		height:280px;
+		background:url('https://blogger.googleusercontent.com/img/a/AVvXsEhpoKR7E_6BtfICIOadramr24GMv2BVi4WzQENZgnA8FV6V8zi7tMaWEKNkRkueaZBBZhQy3qoMHONKwRvTVPPn3IhcOcy3CRVzxB2wJby7lzeqF1ONQCEqOgsvIJN03Mb6tu3fWCw5pWzImraPXAZtH5D5kB8LScIl2wHAtkhRWUetEtlrWfQtgAAimOU') center center/cover no-repeat;
+	}
+
+	.hero::before{
+		content:'';
+		position:absolute;
+		inset:0;
+		background:rgba(0,0,0,.6);
+	}
+
+	.hero-content{
+		position:relative;
+		z-index:2;
+		height:100%;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		text-align:center;
+		padding:20px;
+	}
+
+	.hero-content h1{
+		font-size:32px;
+		font-weight:900;
+		margin-bottom:10px;
+	}
+
+	.hero-content p{
+		color:#ddd;
+		font-size:15px;
+	}
+
+	/* LOGIN */
+	.login-btn{
+		position:absolute;
+		top:15px;
+		right:15px;
+		z-index:3;
+		text-decoration:none;
+		background:#00a2ff;
+		color:#fff;
+		padding:10px 18px;
+		border-radius:30px;
+		font-weight:bold;
+	}
+
+	/* CONTENT CONTAINER */
+	.container{
+		max-width:700px;
+		margin:auto;
+		padding:15px;
+	}
+
+	.judul{
+		text-align:center;
+		font-size:24px;
+		font-weight:bold;
+		margin:20px 0;
+	}
+
+	/* MATCH CARD PINTARBOLA */
+	.match-card{
+		background:#1e1e1e;
+		border-left:4px solid #00ff00;
+		border-radius:10px;
+		padding:12px;
+		margin-bottom:12px;
+	}
+
+	.match-time{
+		color:#ffd700;
+		font-size:13px;
+		font-weight:bold;
+		margin-bottom:6px;
+	}
+
+	.match-team{
+		font-size:16px;
+		font-weight:bold;
+		line-height:1.4;
+		margin-bottom:6px;
+	}
+
+	.match-league{
+		color:#bbb;
+		font-size:12px;
+		margin-bottom:8px;
+	}
+
+	.match-score{
+		display:inline-block;
+		background:#00aa00;
+		padding:6px 10px;
+		border-radius:6px;
+		font-weight:bold;
+	}
+
+	/* RUNNING TEXT STYLE */
+	.running-text {
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		background: rgba(0,0,0,0.55);
+		padding: 10px 0;
+		border-radius: 12px;
+	}
+
+	.running-text span {
+		display: inline-block;
+		padding-left: 100%;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 16px;
+		animation: marquee 18s linear infinite;
+	}
+
+	@keyframes marquee {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(-100%); }
+	}
+
+	/* ==========================================
+	   CSS DARI CODINGAN 1 (SLIDER WORLD CUP)
+	   ========================================== */
+	.fwc-box-container {
+		font-family: 'Poppins', sans-serif;
+		width: 100%;
+		text-align: center;
+		padding: 20px;
+		backdrop-filter: blur(8px);
+		background: rgba(0,0,0,.35);
+		border: 1px solid rgba(255,255,255,.15);
+		border-radius: 25px;
+		box-shadow: 0 0 30px rgba(255,215,0,.2);
+		margin-bottom: 25px;
+	}
+
+	.fwc-logo-text {
+		font-size: 16px;
+		font-weight: 700;
+		color: #ffd700;
+		letter-spacing: 3px;
+		margin-bottom: 10px;
+	}
+
+	.fwc-hero-logo img {
+		max-width: 200px;
+		width: 90%;
+		filter: drop-shadow(0 0 15px rgba(255,215,0,.8));
+	}
+
+	.fwc-slider-container {
+		position: relative;
+		margin: 20px 0;
+		overflow: hidden;
+		border-radius: 20px;
+		background: rgba(0,0,0,.55);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255,255,255,.1);
+	}
+
+	.fwc-slider {
+		display: flex;
+		transition: transform .6s ease;
+	}
+
+	.fwc-slide {
+		min-width: 100%;
+		padding: 25px;
+		text-align: center;
+	}
+
+	.fwc-slide-title {
+		font-size: 15px;
+		font-weight: 700;
+		color: #fff;
+		margin-bottom: 5px;
+	}
+
+	.fwc-slide-time {
+		font-size: 18px;
+		font-weight: 800;
+		color: #ffd700;
+		margin-bottom: 15px;
+	}
+
+	.fwc-match {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.fwc-team {
+		width: 30%;
+	}
+
+	.fwc-team img {
+		width: 60px;
+		height: 60px;
+		object-fit: contain;
+		margin-bottom: 8px;
+	}
+
+	.fwc-team div {
+		font-size: 14px;
+		color: #fff;
+		font-weight: 600;
+	}
+
+	.fwc-score-box {
+		width: 40%;
+		text-align: center;
+	}
+
+	.fwc-score {
+		font-size: 38px;
+		font-weight: 800;
+		color: #fff;
+		margin-bottom: 10px;
+	}
+
+	.fwc-bet-now {
+		display: inline-block;
+		padding: 10px 20px;
+		background: #ffd700;
+		color: #000;
+		font-weight: 800;
+		border-radius: 10px;
+		text-decoration: none;
+		font-size: 14px;
+		transition: .3s;
+	}
+
+	.fwc-bet-now:hover {
+		transform: scale(1.05);
+		box-shadow: 0 0 15px gold;
+	}
+
+	.fwc-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+		border: none;
+		border-radius: 50%;
+		background: rgba(255,255,255,.15);
+		color: #fff;
+		font-size: 20px;
+		cursor: pointer;
+		z-index: 10;
+	}
+
+	.fwc-prev { left: 10px; }
+	.fwc-next { right: 10px; }
+
+	/* SOSMED SLIDE MENU */
+	.sosmed-container{
+		position:fixed;
+		left:15px;
+		bottom:20px;
+		z-index:999999;
+	}
+
+	#btnSosmed{
+		width:60px;
+		height:60px;
+		border:none;
+		border-radius:15px;
+		background:#111;
+		color:#f7c948;
+		font-size:30px;
+		cursor:pointer;
+		box-shadow:0 4px 10px rgba(0,0,0,.4);
+	}
+
+	.sosmed-text{
+		position:absolute;
+		left:70px;
+		bottom:10px;
+		width:170px; 
+		background:#15ff00;
+		color:#fff;
+		padding:5px;
+		border-radius:8px;
+		font-size:12px;
+		font-weight:bold;
+	}
+
+	.sosmed-menu{
+		display:none;
+		margin-bottom:10px;
+	}
+
+	.sosmed-menu a{
+		display:block;
+		background:#fff;
+		color:#000;
+		padding:10px;
+		margin-bottom:5px;
+		border-radius:8px;
+		text-decoration:none;
+		font-weight:bold;
+	}
+
+	/* MOBILE RESPONSIVE PINTARBOLA */
+	@media(max-width:768px){
+		.hero{ height:220px; }
+		.hero-content h1{ font-size:24px; }
+		.hero-content p{ font-size:13px; }
+		.judul{ font-size:20px; }
+		.match-team{ font-size:14px; }
+		.fwc-score { font-size: 30px; }
+		.fwc-team img { width: 45px; height: 45px; }
+	}
+
+
+	/* =======================================================
+	   KODE BAGAN 32 BESAR (DISESUAIKAN TEMA PINTARBOLA)
+	   ======================================================= */
+	.fifa-tournament-container {
+		max-width: 1400px;
+		margin: 30px auto;
+		padding: 20px;
+		background: rgba(0, 0, 0, 0.55);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 20px;
+		font-family: Arial, sans-serif;
+		overflow-x: auto;
+	}
+
+	.fifa-main-title {
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 25px;
+		color: #ffd700;
+		text-align: center;
+	}
+
+	.fifa-rounds-header {
+		display: flex;
+		justify-content: space-between;
+		font-size: 11px;
+		font-weight: bold;
+		color: #bbb;
+		text-align: center;
+		margin-bottom: 15px;
+		padding: 0 10px;
+		min-width: 1200px;
+	}
+	.fifa-round-title { flex: 1; }
+
+	.fifa-bracket-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-width: 1200px;
+	}
+
+	.fifa-bracket-side {
+		display: flex;
+		width: 44%;
+	}
+
+	.fifa-left-side { flex-direction: row; }
+	.fifa-right-side { flex-direction: row-reverse; }
+
+	.fifa-bracket-center {
+		width: 12%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.fifa-round {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 850px;
+		flex: 1;
+		padding: 0 8px;
+	}
+
+	.fifa-match-container {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+	.fifa-left-side .fifa-match-container { flex-direction: row; }
+	.fifa-right-side .fifa-match-container { flex-direction: row-reverse; }
+
+	.fifa-match-code {
+		font-size: 10px;
+		font-weight: bold;
+		color: #ffd700;
+		text-decoration: underline;
+		min-width: 25px;
+		text-align: center;
+	}
+
+	.fifa-match-box {
+		background: #1e1e1e;
+		border: 1px solid rgba(255,255,255,0.15);
+		border-left: 3px solid #00ff00;
+		border-radius: 6px;
+		padding: 6px 8px;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+		flex-grow: 1;
+		max-width: 135px;
+	}
+
+	.fifa-match-time {
+		font-size: 9px;
+		color: #ffd700;
+		font-weight: bold;
+		margin-bottom: 4px;
+	}
+	.fifa-left-side .fifa-match-time { text-align: right; }
+	.fifa-right-side .fifa-match-time { text-align: left; }
+
+	.fifa-tournament-container .fifa-team {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		padding: 3px 0;
+		font-size: 11px;
+		font-weight: bold;
+		color: #fff;
+		height: 18px;
+		width: auto; /* Mencegah bentrok dengan .fwc-team */
+	}
+
+	.fifa-tournament-container .fifa-team img {
+		width: 16px;
+		height: 11px;
+		object-fit: cover;
+		border: 1px solid rgba(255,255,255,0.2);
+		border-radius: 1px;
+		margin-bottom: 0; /* Override layout fwc-team */
+	}
+
+	.fifa-placeholder {
+		color: #777;
+		font-weight: normal;
+	}
+	.fifa-placeholder-flag {
+		width: 16px;
+		height: 11px;
+		background-color: #333;
+		border: 1px dashed #555;
+		border-radius: 1px;
+	}
+
+	.fifa-center-box {
+		background: #252525;
+		border: 1px solid rgba(255,255,255,0.2);
+		border-radius: 6px;
+		padding: 10px;
+		width: 100%;
+		box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+		text-align: center;
+	}
+	.fifa-center-box h4 {
+		margin: 0 0 8px 0;
+		font-size: 12px;
+		color: #00ff00;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	.fifa-center-box .fifa-match-box {
+		max-width: 100%;
+		margin-bottom: 5px;
+	}
+	.fifa-semi-final-codes {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		font-size: 10px;
+		font-weight: bold;
+		color: #ffd700;
+		padding: 0 5px;
+	}
 </style>
-</head>
-
-<body>
+	</head>
+	<body>
 
 	<div class="hero">
 		<a href="https://pintarbola01.com" class="login-btn" target="_blank">LOGIN</a>
@@ -1374,120 +1297,3 @@ body{
 
 	</body>
 	</html>
-    <div class="match-team">Ukraina U19 vs Italia U19</div>
-    <div class="match-league">U19 European Championship</div>
-    <div class="match-score">Handicap: 0 : 1/4</div>
-</div>
-
-</div>
-
-    <!-- MARKETING BOTTOM PROMO -->
-    <div style="text-align:center; margin-top:40px;">
-        <div style="font-size:20px; font-weight:bold; margin-bottom:15px; color:#ffffff;">
-            Betting pertandingan hanya di<br>
-            ╰┈➤ <a href="https://pintarpren.com/" target="_blank" style="color:#2bf321;text-decoration:none; font-weight: 800;">PINTARBOLA</a> ◀
-        </div>
-
-        <a href="https://pintarpren.com/" target="_blank">
-            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjrjyoiU7aojRu9G3oWzNgtP1igKY3c0QaLIonty6m0Ej2kbLJEpoQpyPgO7EksT-pMAYbBnCJTjMtwIG6PF8MzMXxU_pmVfPHab7fhWabsZ-cjIqSzFMQRrl0zZEoX3FIohBvmpNFe7mo1bWIMX7qniMrKgBDeUTPiWq90BxR7DV2UeIUU-LmApt5hyT5L=w680-h204" style="max-width:100%; border-radius:10px; margin-bottom: 20px;">
-        </a>
-
-        <div style="margin-top:10px; margin-bottom:15px; font-size:18px; font-weight:bold; color:#ffd700;">
-            PROVIDER SPORTBOOK TERBAIK #PINTARBOLA
-        </div>
-
-        <a href="https://pintarpren.com/" target="_blank">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIPt4DRZ6_GtXyE-3Kf7V3I7vzPAFd3BY2ZSDHoS8Dy0fMmixWjrT8G-FubfEJxXJxTaMficqfD-ow_nO-cj0V8FaWIVoz63dzd9KJIuqeZxO4B34fSJCAo7ACZYQtxRfJVJjRHAhZgW54prf3kIvLAEjTl8jyrpPk2Wj3rVCUmbgZw8R85175rb2KKPo/w676-h381/Video%20Object%20Remover-1780611009224.gif" style="max-width:400px; width:100%; border-radius: 8px;">
-        </a>
-    </div>
-
-
-<!-- FLOATING SOCIAL MEDIA MENU -->
-<div class="sosmed-container">
-    <div class="sosmed-menu">
-        <a href="https://t.me/OfficialPINTARBOLA" target="_blank">📩 Telegram</a>
-        <a href="https://wa.me/+6287794351685" target="_blank">💬 WhatsApp</a>
-        <a href="https://www.facebook.com/profile.php?id=61584839789373" target="_blank">📘 Facebook</a>
-        <a href="https://www.instagram.com/naypintarbola/" target="_blank">📷 Instagram</a>
-    </div>
-    <div class="sosmed-text">
-        <marquee scrollamount="3">🔰 KLIK DISINI 🔰FOLLOW ALL SOSMED PINTARBOLA 📢 𝑹𝑬𝑺𝑷𝑶𝑵 𝑺𝑬𝑪𝑬𝑷𝑨𝑻 𝑲𝑰𝑳𝑨𝑻 ⚡️</marquee>
-    </div>
-    <button id="btnSosmed">☰</button>
-</div>
-
-<!-- Zendesk Widget -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a0a17d25-2ced-4090-8a66-e89bf3fa1b22"> </script>
-
-<!-- SLIDER LOGIC SCRIPT -->
-<script>
-let currentSlide = 0;
-const slider = document.getElementById("slider");
-const dots = document.querySelectorAll(".dot");
-const totalSlides = document.querySelectorAll(".slide").length;
-
-function showSlide(index){
-    if(index >= totalSlides) currentSlide = 0;
-    else if(index < 0) currentSlide = totalSlides - 1;
-    else currentSlide = index;
-
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-    dots.forEach(dot => dot.classList.remove("active"));
-    if(dots[currentSlide]) {
-        dots[currentSlide].classList.add("active");
-    }
-}
-
-function nextSlide(){ showSlide(currentSlide + 1); }
-function prevSlide(){ showSlide(currentSlide - 1); }
-
-// Auto play slider tiap 5 detik
-setInterval(() => { nextSlide(); }, 5000);
-</script>
-
-<!-- FLOATING SOSMED TOGGLE SCRIPT -->
-<script>
-document.getElementById("btnSosmed").onclick = function(){
-    var menu = document.querySelector(".sosmed-menu");
-    if(menu.style.display === "block"){
-        menu.style.display = "none";
-    }else{
-        menu.style.display = "block";
-    }
-}
-</script>
-
-<!-- SECURITY SYSTEM SCRIPTS -->
-<script>
-// Blokir Klik Kanan
-document.addEventListener('contextmenu', e => e.preventDefault());
-
-// Blokir Keyboard Inspection (F12, Ctrl+U, Ctrl+Shift+I, dll)
-document.addEventListener("keydown", function (e) {
-  if (
-    e.key === "F12" || e.keyCode === 123 ||
-    (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
-    (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
-    (e.ctrlKey && (e.key === "u" || e.key === "U" || e.keyCode === 85)) ||
-    (e.ctrlKey && (e.key === "s" || e.key === "S" || e.keyCode === 83))
-  ) {
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  }
-});
-
-// Deteksi Jika DevTools Terbuka (Mengubah Resolusi Window)
-setInterval(function(){
-  if(
-    window.outerWidth - window.innerWidth > 160 ||
-    window.outerHeight - window.innerHeight > 160
-  ) {
-    document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:100px;font-family:sans-serif;'>ACCESS DENIED</h1>";
-  }
-}, 1000);
-</script>
-
-</body>
-</html>
