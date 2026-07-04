@@ -1,4 +1,1264 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<link href="https://blogger.googleusercontent.com/img/a/AVvXsEhdbj3TgRkrG6o-1SO9qsz8JopDPx2wN0TZLb5NG_-0kJl4sVz_HciMkmYoSmtauHlpRULMsniXt8JBITBi187T7Ul6uVS-9POuu4ui9tk73UFLnNrsFv3KwigBlR57PuuCA8z-E6Qrs_la4XotZo1UYVyWgg3FgJad2bZ9T4WAY8T-aLak73KjocRcTVHU" rel="icon" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jadwal Pertandingan & Prediksi Bola - PIALA DUNIA 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    background: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url('https://blogger.googleusercontent.com/img/a/AVvXsEhGJIGUrO1-W2v952nSps1QKVzblSv5N_5--Vs2z6SNRhQx7NlZ_9lXdYxNP9avXi5erszrNe2g8DAiTze83WDAaK5vJYs3I8vxlBugdefVFw3Pd8pJ4jcx5TuTKTrQNSaGlOyCHqbr3B2la6-McsRbww9SLcLDcCX7DMM6fif1UyqgtuBu5EPL5FUC_Xc') center center fixed;
+    background-size:cover;
+    color:#fff;
+}
+
+/* HERO AREA */
+.hero{
+    position:relative;
+    height:280px;
+    background:url('https://blogger.googleusercontent.com/img/a/AVvXsEj1HWriANZqBRBsz_o1745j2Gs5kLNigfN4DqP9uKID-PHQEUiJ_lVI4fX1QFOxwpIuXWUxOUPQM5lv4TTnycnY_UlUQdl1snU1mfcSEIsL3fQXLQDhR_ta2I8lKjOaYl9GeaKVgp-TwpuSzLvSQ5j4fQy2fRl-Aey3uqakePkVdH_LvkjO1CRSFoZsHyU') center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:32px;
+    font-weight:900;
+    margin-bottom:10px;
+    text-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
+
+.hero-content p{
+    color:#ddd;
+    font-size:15px;
+    font-weight: 600;
+}
+
+/* LOGIN BUTTON */
+.login-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+    z-index:99;
+    text-decoration:none;
+    background:#00a2ff;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    transition: .3s;
+}
+
+.login-btn:hover {
+    background: #0082cc;
+    transform: scale(1.05);
+}
+
+/* MAIN CONTAINER */
+.container{
+    width:95%;
+    max-width:700px;
+    margin: 20px auto;
+    padding:25px;
+    backdrop-filter:blur(8px);
+    background:rgba(0,0,0,.45);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(255,215,0,.1);
+}
+
+.logo-top{
+    font-size:16px;
+    font-weight:700;
+    color:#ffd700;
+    letter-spacing:3px;
+    margin-bottom:15px;
+    text-align: center;
+    animation:pulse 2s infinite;
+}
+
+.hero-logo img{
+    max-width: 200px;
+    width: 90%;
+    filter: drop-shadow(0 0 15px rgba(255,215,0,.8));
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* RUNNING TEXT / MARQUEE */
+.running-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: rgba(0,0,0,0.65);
+    padding: 12px 0;
+    border-radius: 12px;
+    border: 1px solid rgba(250, 171, 12, 0.3);
+    margin: 15px 0;
+}
+
+.running-text span {
+    display: inline-block;
+    padding-left: 100%;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    animation: marquee 22s linear infinite;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* SLIDER MATCH STYLE */
+.slider-container{
+    position:relative;
+    margin:25px 0;
+    overflow:hidden;
+    border-radius:20px;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.slider{
+    display:flex;
+    transition:transform .6s ease;
+}
+
+.slide{
+    min-width:100%;
+    padding:25px;
+    text-align:center;
+}
+
+.slide-title{
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:5px;
+    letter-spacing: 1px;
+}
+
+.slide-time{
+    font-size:18px;
+    font-weight:800;
+    color:#ffd700;
+    margin-bottom:15px;
+}
+
+.match{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.team{
+    width:32%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.team img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    margin-bottom:8px;
+}
+
+.score-box{
+    width:36%;
+    text-align:center;
+}
+
+.score{
+    font-size:38px;
+    font-weight:800;
+    color:#fff;
+    margin-bottom:10px;
+    letter-spacing: 2px;
+}
+
+.bet-now{
+    display:inline-block;
+    padding:10px 22px;
+    background:linear-gradient(45deg,#b8860b,#ffd700);
+    color:#000;
+    font-weight:800;
+    border-radius:10px;
+    text-decoration:none;
+    transition: .3s;
+    box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+}
+
+.bet-now:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px gold;
+}
+
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    z-index:10;
+    transition: .3s;
+}
+
+.arrow:hover { background: rgba(255,255,255,0.3); }
+.prev{ left:10px; }
+.next{ right:10px; }
+
+/* DOTS SLIDER */
+.dots{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    padding-bottom:15px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#555;
+    cursor:pointer;
+    transition: .3s;
+}
+
+.dot.active{
+    background:#ffd700;
+    box-shadow:0 0 10px gold;
+}
+
+/* JADWAL & PREDIKSI LIST */
+.judul{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin:25px 0 15px 0;
+    color: #ffd700;
+    border-bottom: 2px solid rgba(250, 171, 12, 0.4);
+    padding-bottom: 8px;
+}
+
+.match-card{
+    background:#1e1e1e;
+    border-left:4px solid #faab0c;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:12px;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.match-time{
+    color:#ffd700;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.match-team{
+    font-size:16px;
+    font-weight:bold;
+    line-height:1.4;
+    margin-bottom:6px;
+    color: #fff;
+}
+
+.match-league{
+    color:#bbb;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.match-score{
+    display:inline-block;
+    background:#faab0c;
+    color: #000;
+    padding:6px 12px;
+    border-radius:6px;
+    font-weight:bold;
+    font-size: 13px;
+}
+
+/* BANNER & PROMO AREA */
+.separator-banner {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.separator-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* FLOATING SOSMED BUTTON */
+.sosmed-container{
+    position:fixed;
+    left:15px;
+    bottom:20px;
+    z-index:999999;
+}
+
+#btnSosmed{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:15px;
+    background:#111;
+    color:#faab0c;
+    font-size:30px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,.4);
+    transition: .3s;
+}
+
+#btnSosmed:hover { transform: scale(1.05); }
+
+.sosmed-text{
+    position:absolute;
+    left:70px;
+    bottom:10px;
+    width:170px; 
+    background:#faab0c;
+    color:#fff;
+    padding:5px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.sosmed-menu{
+    display:none;
+    margin-bottom:10px;
+}
+
+.sosmed-menu a{
+    display:block;
+    background:#fff;
+    color:#000;
+    padding:10px;
+    margin-bottom:5px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size: 13px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ANIMATIONS */
+@keyframes pulse{
+    0%,100%{opacity:1;}
+    50%{opacity:.6;}
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+    .hero{ height:200px; }
+    .hero-content h1{ font-size:22px; }
+    .hero-content p{ font-size:13px; }
+    .judul{ font-size:18px; }
+    .match-team{ font-size:14px; }
+    .score { font-size: 32px; }
+    .team img { width: 55px; height: 55px; }
+}
+
+/* ==========================================================================
+   FIFA BRACKET TOURNAMENT STYLES (MATCHED THEME)
+   ========================================================================== */
+
+/* Container Utama Bagan */
+.fifa-bracket-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px 0;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.05);
+}
+
+/* Sisi Kiri dan Kanan Bagan */
+.fifa-bracket-side {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+
+.fifa-left-side {
+    flex-direction: row;
+}
+
+.fifa-right-side {
+    flex-direction: row-reverse; /* Membalik urutan ronde khusus sisi kanan */
+}
+
+/* Setiap Kolom Ronde */
+.fifa-round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    min-width: 160px;
+}
+
+/* Container Pertandingan + Kode */
+.fifa-match-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    width: 100%;
+}
+
+/* Kotak Pertandingan */
+.fifa-match-box {
+    background: #1e1e1e;
+    border-left: 3px solid #faab0c;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Waktu Pertandingan */
+.fifa-match-time {
+    font-size: 11px;
+    color: #ffd700;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+/* Baris Tim */
+.fifa-team {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    padding: 3px 0;
+}
+
+/* Bendera Negara */
+.fifa-team img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Kotak Abu-abu Pengganti Bendera (Belum Lolos) */
+.fifa-placeholder-flag {
+    width: 20px;
+    height: 14px;
+    background-color: #333;
+    border-radius: 2px;
+    border: 1px dashed rgba(255,255,255,0.2);
+}
+
+/* Text Pengganti Tim (W74, RU101, dll) */
+.fifa-placeholder {
+    color: #777;
+    font-weight: 500;
+}
+
+/* Kode Unik Pertandingan (M74, M73, dll) */
+.fifa-match-code {
+    font-size: 11px;
+    background: linear-gradient(45deg, #b8860b, #ffd700);
+    color: #000;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-weight: 800;
+    min-width: 38px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Area Tengah (Final & Juara 3) */
+.fifa-bracket-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    min-width: 200px;
+}
+
+/* Kotak Khusus Final & Juara 3 */
+.fifa-center-box {
+    width: 100%;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 15px;
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+}
+
+.fifa-center-box h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255,215,0,0.3);
+}
+
+/* Kode Semi-Final di Bagian Atas Tengah */
+.fifa-semi-final-codes {
+    display: flex;
+    gap: 30px;
+    font-size: 12px;
+    color: #ffd700;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE UNTUK LAYAR KECIL */
+@media(max-width: 768px) {
+    .fifa-bracket-wrapper {
+        padding: 15px;
+        gap: 15px;
+    }
+    .fifa-round {
+        min-width: 140px;
+        gap: 15px;
+    }
+    .fifa-team {
+        font-size: 12px;
+    }
+    .fifa-match-code {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <a href="https://parlaycpet.com/" class="login-btn" target="_blank">LOGIN</a>
+    <div class="hero-content">
+        <h1>⚽ JADWAL & PREDIKSI SEPAK BOLA</h1>
+        <p>Partner Resmi Piala Dunia FIFA 2026 Parlay388</p>
+    </div>
+</div>
+
+<!-- RUNNING TEXT PROMO -->
+<div class="container" style="background:transparent; border:none; box-shadow:none; margin-bottom:0; padding-bottom:0; padding-top: 0;">
+    <div class="running-text">
+        <span>
+            🔥 Prediksi Terupdate Setiap Hari • Jadwal Bola Terlengkap • Bonus Depo 10% Setiap Hari • Deposit Mudah via QRIS • Proses Deposit & Withdraw Tercepat • Hanya di PARLAY388 🔥
+        </span>
+    </div>
+</div>
+<div class="container">
+
+    <div class="logo-top">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    
+    <div class="hero-logo">
+        <img src="https://cdn.mixlink.top/global/seamless/510/IDR/logo/163409698.png" alt="PARLAY388">
+    </div>
+
+    <div class="slider-container">
+        <button class="arrow prev" onclick="prevSlide()">❮</button>
+        <button class="arrow next" onclick="nextSlide()">❯</button>
+
+        <div class="slider" id="slider">
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 32</div>
+    <div class="slide-time">03 JULI 2026 — 02:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/q3T29f0D/image.png" alt="Spanyol">
+            <div>Spanyol</div>
+        </div>
+        <div class="score-box">
+            <div class="score">3 : 0</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/DPRr2w9Y/image.png" alt="Austria">
+            <div>Austria</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 32</div>
+    <div class="slide-time">03 JULI 2026 — 06:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/7xmmBJZs/image.png" alt="Portugal">
+            <div>Portugal</div>
+        </div>
+        <div class="score-box">
+            <div class="score">2 : 1</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/wN7CxRf2/image.png" alt="Kroasia">
+            <div>Kroasia</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 32</div>
+    <div class="slide-time">03 JULI 2026 — 10:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/kgVSgdYJ/image.png" alt="Swiss">
+            <div>Swiss</div>
+        </div>
+        <div class="score-box">
+            <div class="score">2 : 0</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/hFywWLKs/image.png" alt="Aljazair">
+            <div>Aljazair</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 32</div>
+    <div class="slide-time">04 JULI 2026 — 01:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/Mx3wqTdf/image.png" alt="Australia">
+            <div>Australia</div>
+        </div>
+        <div class="score-box">
+            <div class="score">1 ² : 1 ⁴</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/xqL7x7B6/image.png" alt="Mesir">
+            <div>Mesir</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 32</div>
+    <div class="slide-time">04 JULI 2026 — 05:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/4nhVLNZz/image.png" alt="Argentina">
+            <div>Argentina</div>
+        </div>
+        <div class="score-box">
+            <div class="score">3 : 2</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/Myr4k3wV/image.png" alt="Tanjung Verde">
+            <div>Tanjung Verde</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 16</div>
+    <div class="slide-time">04 JULI 2026 — 08:30 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/3505jQGP/image.png" alt="Kolombia">
+            <div>Kolombia</div>
+        </div>
+        <div class="score-box">
+            <div class="score">0 : 0</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/xK4tnJbL/image.png" alt="Ghana">
+            <div>Ghana</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 16</div>
+    <div class="slide-time">05 JULI 2026 — 00:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/DPDB9h8X/image.png" alt="Kanada">
+            <div>Kanada</div>
+        </div>
+        <div class="score-box">
+            <div class="score"> : 0</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/JRMZyB4B/image.png" alt="Maroko">
+            <div>Maroko</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 16</div>
+    <div class="slide-time">05 JULI 2026 — 04:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/QvDCWLCq/image.png" alt="Paraguay">
+            <div>Paraguay</div>
+        </div>
+        <div class="score-box">
+            <div class="score">0 : 0</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/zk24T5x/image.png" alt="Prancis">
+            <div>Prancis</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 16</div>
+    <div class="slide-time">06 JULI 2026 — 03:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/VWVKDc8Y/image.png" alt="Brasil">
+            <div>Brasil</div>
+        </div>
+        <div class="score-box">
+            <div class="score">0 : 0</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/Z1mSpLgF/image.png" alt="Norwegia">
+            <div>Norwegia</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-title">⚽ FIFA WORLD CUP 2026 ⚽</div>
+    <div class="slide-title">Knockout, Round of 16</div>
+    <div class="slide-time">06 JULI 2026 — 07:00 WIB</div>
+    <div class="match">
+        <div class="team">
+            <img src="https://i.ibb.co/PqYcWbP/image.png" alt="Meksiko">
+            <div>Meksiko</div>
+        </div>
+        <div class="score-box">
+            <div class="score">0 : 0</div>
+            <a href="https://parlaysaka.com/" target="_blank" class="bet-now">BET NOW</a>
+        </div>
+        <div class="team">
+            <img src="https://i.ibb.co/5g49b82x/image.png" alt="Inggris">
+            <div>Inggris</div>
+        </div>
+    </div>
+</div>
+        </div>
+        <!-- Dots Navigation -->
+        <div class="dots">
+            <div class="dot active" onclick="showSlide(0)"></div>
+            <div class="dot" onclick="showSlide(1)"></div>
+            <div class="dot" onclick="showSlide(2)"></div>
+            <div class="dot" onclick="showSlide(3)"></div>
+        </div>
+    </div>
+<div class="fifa-tournament-container">
+	<div class="fifa-main-title">BAGAN FASE GUGUR PARLAY388</div>
+	<div class="fifa-bracket-wrapper">
+		
+		<div class="fifa-bracket-side fifa-left-side">
+			
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M74</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">30/06 03:30 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/de.png"> GER</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/py.png"> PAR</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M77</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">01/07 04:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/fr.png"> FRA</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/se.png"> SWE</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M73</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">29/06 02:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/za.png"> RSA</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ca.png"> CAN</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M75</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">30/06 08:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/nl.png"> NED</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ma.png"> MAR</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M83</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">03/07 06:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/pt.png"> POR</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/hr.png"> CRO</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M84</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">03/07 02:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/es.png"> ESP</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/at.png"> AUT</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M81</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">02/07 07:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/us.png"> USA</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ba.png"> BIH</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M82</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">02/07 03:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/be.png"> BEL</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/sn.png"> SEN</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M89</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">05/07 04:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/py.png"> PAR</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/fr.png"> FRA</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M90</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">04/07 24:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ca.png"> CAN</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ma.png"> MAR</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M93</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">07/07 02:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/pt.png"> POR</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/es.png"> ESP</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M94</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">07/07 10:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/us.png"> USA</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/be.png"> BEL</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M97</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">10/07 03:00 WIB</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W89</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W90</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M98</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">11/07 02:00 WIB</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W93</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W94</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M101</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">15/07 02:00 WIB</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W97</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W98</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="fifa-bracket-center">
+			
+			<div class="fifa-center-box">
+				<h4>FINAL</h4>
+				<div class="fifa-match-box">
+					<div class="fifa-match-time">20/07 02:00 WIB</div>
+					<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W101</div>
+					<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W102</div>
+				</div>
+				<span class="fifa-match-code">M104</span>
+			</div>
+
+			<div class="fifa-center-box">
+				<h4>PLAY-OFF JUARA 3</h4>
+				<div class="fifa-match-box">
+					<div class="fifa-match-time">19/07 04:00 WIB</div>
+					<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> RU101</div>
+					<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> RU102</div>
+				</div>
+				<span class="fifa-match-code">M103</span>
+			</div>
+
+		</div>
+
+		<div class="fifa-bracket-side fifa-right-side">
+			
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M76</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">29/06 24:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/br.png"> BRA</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/jp.png"> JPN</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M78</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">30/06 24:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ci.png"> CIV</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/no.png"> NOR</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M79</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">01/07 08:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/mx.png"> MEX</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ec.png"> ECU</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M80</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">01/07 23:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/cd.png"> COD</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M86</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">04/07 05:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ar.png"> ARG</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/cv.png"> CPV</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M88</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">04/07 01:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/au.png"> AUS</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/eg.png"> EGY</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M85</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">03/07 10:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ch.png"> SUI</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/dz.png"> ALG</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M87</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">04/07 08:30 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/co.png"> COL</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/gh.png"> GHA</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M91</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">06/07 03:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/br.png"> BRA</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/no.png"> NOR</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M92</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">06/07 07:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/mx.png"> MEX</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M95</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">07/07 23:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ar.png"> ARG</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/eg.png"> EGY</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M96</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">08/07 03:00 WIB</div>
+						<<div class="fifa-team"><img src="https://flagcdn.com/w20/ch.png"> SUI</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W87</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M99</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">12/07 04:00 WIB</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W91</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W92</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M100</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">12/07 08:00 WIB</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W95</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W96</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M102</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">16/07 02:00 WIB</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W99</div>
+						<div class="fifa-team fifa-placeholder"><div class="fifa-placeholder-flag"></div> W100</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+    </div>
+</div>
+   <!-- JADWAL 04 JULI 2026 -->
+    <div class="judul">JADWAL & PREDIKSI SCORE 04 JULI 2026</div>
+
+<div class="match-card">
+    <div class="match-time">01:00 WIB</div>
+    <div class="match-team">Australia vs Mesir</div>
+    <div class="match-league">🏆 FIFA World Cup , Knockout, Round of 32 🏆</div>
+    <div class="match-score">Handicap: 0 : 1/4</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">05:00 WIB</div>
+    <div class="match-team">Argentina vs Tanjung Verde</div>
+    <div class="match-league">🏆 FIFA World Cup , Knockout, Round of 32 🏆</div>
+    <div class="match-score">Handicap: 1 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">06:30 WIB</div>
+    <div class="match-team">Loudoun United vs SC Jacksonville</div>
+    <div class="match-league">USL Championship</div>
+    <div class="match-score">Handicap: 1/2 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">06:30 WIB</div>
+    <div class="match-team">FC Naples vs Portland Hearts of Pine</div>
+    <div class="match-league">USL League One</div>
+    <div class="match-score">Handicap: 1/4 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">07:00 WIB</div>
+    <div class="match-team">Richmond Kickers vs Sarasota</div>
+    <div class="match-league">USL League One</div>
+    <div class="match-score">Handicap: 1/2 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">08:30 WIB</div>
+    <div class="match-team">Kolombia vs Ghana</div>
+    <div class="match-league">🏆 FIFA World Cup , Knockout, Round of 32 🏆</div>
+    <div class="match-score">Handicap: 1/2 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">20:00 WIB</div>
+    <div class="match-team">Spanyol U19 vs Jerman U19</div>
+    <div class="match-league">U19 European Championship</div>
+    <div class="match-score">Handicap: 1/2 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">20:00 WIB</div>
+    <div class="match-team">Denmark U19 vs Wales U19</div>
+    <div class="match-league">U19 European Championship</div>
+    <div class="match-score">Handicap: 1/4 : 0</div>
+</div>
+
+
+    <!-- SEPARATOR BANNER 1 -->
+    <div class="separator-banner">
+        <a href="https://parlaycpet.com/" target="_blank">
+            <img src="https://cdn.mixlink.top/global/default/icon/ffwbtng.webp" width="320" alt="Banner Seamless">
+        </a>
+    </div>
+
+<!-- JADWAL & PREDIKSI SCORE 05 JUlI 2026 -->
+<div class="judul">JADWAL & PREDIKSI SCORE 05 juli 2026</div>
+
+<div class="match-card">
+    <div class="match-time">00:00 WIB</div>
+    <div class="match-team">Kanada vs Maroko</div>
+    <div class="match-league">🏆 FIFA World Cup , Knockout, Round of 16 🏆</div>
+    <div class="match-score">Handicap: 0 : 1/4</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">02:00 WIB</div>
+    <div class="match-team">Criciúma vs Sport Recife</div>
+    <div class="match-league">Brazil Serie B</div>
+    <div class="match-score">Handicap: 1/4 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">02:00 WIB</div>
+    <div class="match-team">Novorizontino vs Atlético-GO</div>
+    <div class="match-league">Brazil Serie B</div>
+    <div class="match-score">Handicap: 1/4 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">02:00 WIB</div>
+    <div class="match-team">Londrina vs CRB</div>
+    <div class="match-league">Brazil Serie B</div>
+    <div class="match-score">Handicap: 1/2 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">04:00 WIB</div>
+    <div class="match-team">Paraguay vs Prancis</div>
+    <div class="match-league">🏆 FIFA World Cup , Knockout, Round of 16 🏆</div>
+    <div class="match-score">Handicap: 0 : 1/2</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">06:00 WIB</div>
+    <div class="match-team">Goiás vs Ceará</div>
+    <div class="match-league">Brazil Serie B</div>
+    <div class="match-score">Handicap: 1/4 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">22:00 WIB</div>
+    <div class="match-team">Serbia U19 vs Kroasia U19</div>
+    <div class="match-league">U19 European Championship</div>
+    <div class="match-score">Handicap: 1/4 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">22:00 WIB</div>	<!DOCTYPE html>
 	<html lang="id">
 	<head>
 	<link href="https://blogger.googleusercontent.com/img/a/AVvXsEg-hsZnAd9n2HDbusR6pDk4XvwAqK9yhG-RxIFRL3Eh3NVBTX82Yz-HU17iKU0UqbSG3FCjVSVCh5l5sy8tqZDOUKJKhSjEW3u9YzWSuD-pg3L4KGJQhsUvWXnwl4I4HjM8Hi965BQmea6rqL_LKLFqk_6n97yYXhNx_BzDOnRFdzwr1kIo5xxKSNnEN8x6" rel="icon" />
@@ -1297,3 +2557,120 @@
 
 	</body>
 	</html>
+    <div class="match-team">Ukraina U19 vs Italia U19</div>
+    <div class="match-league">U19 European Championship</div>
+    <div class="match-score">Handicap: 0 : 1/4</div>
+</div>
+
+</div>
+
+    <!-- MARKETING BOTTOM PROMO -->
+    <div style="text-align:center; margin-top:40px;">
+        <div style="font-size:20px; font-weight:bold; margin-bottom:15px; color:#ffffff;">
+            Betting pertandingan hanya di<br>
+            ╰┈➤ <a href="https://parlaycpet.com/" target="_blank" style="color:#2bf321;text-decoration:none; font-weight: 800;">PARLAY388</a> ◀
+        </div>
+
+        <a href="https://parlaycpet.com/" target="_blank">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjrjyoiU7aojRu9G3oWzNgtP1igKY3c0QaLIonty6m0Ej2kbLJEpoQpyPgO7EksT-pMAYbBnCJTjMtwIG6PF8MzMXxU_pmVfPHab7fhWabsZ-cjIqSzFMQRrl0zZEoX3FIohBvmpNFe7mo1bWIMX7qniMrKgBDeUTPiWq90BxR7DV2UeIUU-LmApt5hyT5L=w680-h204" style="max-width:100%; border-radius:10px; margin-bottom: 20px;">
+        </a>
+
+        <div style="margin-top:10px; margin-bottom:15px; font-size:18px; font-weight:bold; color:#ffd700;">
+            PROVIDER SPORTBOOK TERBAIK #PARLAY388
+        </div>
+
+        <a href="https://parlaycpet.com/" target="_blank">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCj01yvs1inbcrl0GDyX2n-HCkxwaxXn_h6AOwQkxNdEhdYM7rG3BgV2AyoGXjHOxQodpxYZk01RsGTDwN9_2WmwJkHv7LU8nviihDRTrHq1MofDV08SpMM0s7AQyM4E7HQEdKKXKl9I0FAY4-xqqP6QVlnYgmC5pq9X29s5qwt46n8mzj92LiL_p5lwPP/w572-h323/parlay388gif.gif" style="max-width:400px; width:100%; border-radius: 8px;">
+        </a>
+    </div>
+
+
+<!-- FLOATING SOCIAL MEDIA MENU -->
+<div class="sosmed-container">
+    <div class="sosmed-menu">
+        <a href="https://t.me/Officialparlay" target="_blank">📩 Telegram</a>
+        <a href="https://wa.me/+6287746331849" target="_blank">💬 WhatsApp</a>
+        <a href="https://facebook.com/61584545414503" target="_blank">📘 Facebook</a>
+        <a href="https://instagram.com/kesyaparlayy/" target="_blank">📷 Instagram</a>
+    </div>
+    <div class="sosmed-text">
+        <marquee scrollamount="3">🔰 KLIK DISINI 🔰FOLLOW ALL SOSMED 𝐏𝐀𝐑𝐋𝐀𝐘𝟑𝟖𝟖 📢 𝑹𝑬𝑺𝑷𝑶𝑵 𝑺𝑬𝑪𝑬𝑷𝑨𝑻 𝑲𝑰𝑳𝑨𝑻 ⚡️</marquee>
+    </div>
+    <button id="btnSosmed">☰</button>
+</div>
+
+<!-- Zendesk Widget -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a0a17d25-2ced-4090-8a66-e89bf3fa1b22"> </script>
+
+<!-- SLIDER LOGIC SCRIPT -->
+<script>
+let currentSlide = 0;
+const slider = document.getElementById("slider");
+const dots = document.querySelectorAll(".dot");
+const totalSlides = document.querySelectorAll(".slide").length;
+
+function showSlide(index){
+    if(index >= totalSlides) currentSlide = 0;
+    else if(index < 0) currentSlide = totalSlides - 1;
+    else currentSlide = index;
+
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    if(dots[currentSlide]) {
+        dots[currentSlide].classList.add("active");
+    }
+}
+
+function nextSlide(){ showSlide(currentSlide + 1); }
+function prevSlide(){ showSlide(currentSlide - 1); }
+
+// Auto play slider tiap 5 detik
+setInterval(() => { nextSlide(); }, 5000);
+</script>
+
+<!-- FLOATING SOSMED TOGGLE SCRIPT -->
+<script>
+document.getElementById("btnSosmed").onclick = function(){
+    var menu = document.querySelector(".sosmed-menu");
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    }else{
+        menu.style.display = "block";
+    }
+}
+</script>
+
+<!-- SECURITY SYSTEM SCRIPTS -->
+<script>
+// Blokir Klik Kanan
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Blokir Keyboard Inspection (F12, Ctrl+U, Ctrl+Shift+I, dll)
+document.addEventListener("keydown", function (e) {
+  if (
+    e.key === "F12" || e.keyCode === 123 ||
+    (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+    (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
+    (e.ctrlKey && (e.key === "u" || e.key === "U" || e.keyCode === 85)) ||
+    (e.ctrlKey && (e.key === "s" || e.key === "S" || e.keyCode === 83))
+  ) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+});
+
+// Deteksi Jika DevTools Terbuka (Mengubah Resolusi Window)
+setInterval(function(){
+  if(
+    window.outerWidth - window.innerWidth > 160 ||
+    window.outerHeight - window.innerHeight > 160
+  ) {
+    document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:100px;font-family:sans-serif;'>ACCESS DENIED</h1>";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
