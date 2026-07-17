@@ -348,174 +348,218 @@
 	}
 
 
-	/* =======================================================
-	   KODE BAGAN 32 BESAR (DISESUAIKAN TEMA PINTARBOLA)
-	   ======================================================= */
-	.fifa-tournament-container {
-		max-width: 1400px;
-		margin: 30px auto;
-		padding: 20px;
-		background: rgba(0, 0, 0, 0.55);
-		border: 1px solid rgba(255, 255, 255, 0.15);
-		border-radius: 20px;
-		font-family: Arial, sans-serif;
-		overflow-x: auto;
-	}
+/* --- STYLING UTAMA BAGAN --- */
+        .fifa-tournament-container {
+            background: #111;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
 
-	.fifa-main-title {
-		font-size: 24px;
-		font-weight: bold;
-		margin-bottom: 25px;
-		color: #ffd700;
-		text-align: center;
-	}
+        .fifa-main-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
 
-	.fifa-rounds-header {
-		display: flex;
-		justify-content: space-between;
-		font-size: 11px;
-		font-weight: bold;
-		color: #bbb;
-		text-align: center;
-		margin-bottom: 15px;
-		padding: 0 10px;
-		min-width: 1200px;
-	}
-	.fifa-round-title { flex: 1; }
+        .fifa-rounds-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #222;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            min-width: 1200px;
+        }
 
-	.fifa-bracket-wrapper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		min-width: 1200px;
-	}
+        .fifa-round-title {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #aaa;
+            text-transform: uppercase;
+        }
 
-	.fifa-bracket-side {
-		display: flex;
-		width: 44%;
-	}
+        .fifa-bracket-wrapper {
+            display: flex;
+            justify-content: space-between;
+            min-width: 1200px;
+            gap: 15px;
+        }
 
-	.fifa-left-side { flex-direction: row; }
-	.fifa-right-side { flex-direction: row-reverse; }
+        .fifa-bracket-side {
+            display: flex;
+            flex: 4;
+            justify-content: space-between;
+            gap: 15px;
+        }
 
-	.fifa-bracket-center {
-		width: 12%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 20px;
-	}
+        .fifa-round {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex: 1;
+            gap: 15px;
+        }
 
-	.fifa-round {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		height: 850px;
-		flex: 1;
-		padding: 0 8px;
-	}
+        /* --- STYLING MATCH BOX --- */
+        .fifa-match-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
 
-	.fifa-match-container {
-		display: flex;
-		align-items: center;
-		gap: 5px;
-	}
-	.fifa-left-side .fifa-match-container { flex-direction: row; }
-	.fifa-right-side .fifa-match-container { flex-direction: row-reverse; }
+        .fifa-match-box {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 6px;
+            width: 100%;
+            padding: 6px 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
 
-	.fifa-match-code {
-		font-size: 10px;
-		font-weight: bold;
-		color: #ffd700;
-		text-decoration: underline;
-		min-width: 25px;
-		text-align: center;
-	}
+        .fifa-match-time {
+            font-size: 10px;
+            color: #888;
+            margin-bottom: 5px;
+            text-align: center;
+            border-bottom: 1px solid #2a2a2a;
+            padding-bottom: 3px;
+        }
 
-	.fifa-match-box {
-		background: #1e1e1e;
-		border: 1px solid rgba(255,255,255,0.15);
-		border-left: 3px solid #00ff00;
-		border-radius: 6px;
-		padding: 6px 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-		flex-grow: 1;
-		max-width: 135px;
-	}
+        .fifa-team {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 3px 0;
+        }
 
-	.fifa-match-time {
-		font-size: 9px;
-		color: #ffd700;
-		font-weight: bold;
-		margin-bottom: 4px;
-	}
-	.fifa-left-side .fifa-match-time { text-align: right; }
-	.fifa-right-side .fifa-match-time { text-align: left; }
+        .fifa-team img {
+            width: 18px;
+            height: auto;
+            border-radius: 2px;
+        }
 
-	.fifa-tournament-container .fifa-team {
-		display: flex;
-		align-items: center;
-		gap: 6px;
-		padding: 3px 0;
-		font-size: 11px;
-		font-weight: bold;
-		color: #fff;
-		height: 18px;
-		width: auto; /* Mencegah bentrok dengan .fwc-team */
-	}
+        .fifa-match-code {
+            font-size: 9px;
+            color: #555;
+            background: #252525;
+            padding: 1px 5px;
+            border-radius: 3px;
+            margin-top: 4px;
+            font-weight: bold;
+        }
 
-	.fifa-tournament-container .fifa-team img {
-		width: 16px;
-		height: 11px;
-		object-fit: cover;
-		border: 1px solid rgba(255,255,255,0.2);
-		border-radius: 1px;
-		margin-bottom: 0; /* Override layout fwc-team */
-	}
+        /* --- STYLING KOLOM TENGAH (FINAL & PODIUM) --- */
+        .fifa-bracket-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1.8;
+            gap: 25px;
+            padding: 0 10px;
+        }
 
-	.fifa-placeholder {
-		color: #777;
-		font-weight: normal;
-	}
-	.fifa-placeholder-flag {
-		width: 16px;
-		height: 11px;
-		background-color: #333;
-		border: 1px dashed #555;
-		border-radius: 1px;
-	}
+        .fifa-center-box {
+            width: 100%;
+            text-align: center;
+        }
 
-	.fifa-center-box {
-		background: #252525;
-		border: 1px solid rgba(255,255,255,0.2);
-		border-radius: 6px;
-		padding: 10px;
-		width: 100%;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-		text-align: center;
-	}
-	.fifa-center-box h4 {
-		margin: 0 0 8px 0;
-		font-size: 12px;
-		color: #00ff00;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-	}
-	.fifa-center-box .fifa-match-box {
-		max-width: 100%;
-		margin-bottom: 5px;
-	}
-	.fifa-semi-final-codes {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		font-size: 10px;
-		font-weight: bold;
-		color: #ffd700;
-		padding: 0 5px;
-	}
-</style>
+        .fifa-center-box h4 {
+            margin: 0 0 8px 0;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #ffd700;
+        }
+
+        .fifa-center-box:last-of-type h4 {
+            color: #cd7f32;
+        }
+
+        /* --- TAMPILAN PODIUM SEGITIGA & EFEK CAHAYA/GLOW --- */
+        .fifa-rank-podium-center {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Membuat formasi segitiga berdasarkan tinggi box */
+            gap: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .fifa-rank-box {
+            background: #1a1a1a;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            min-width: 90px;
+            transition: all 0.3s ease;
+        }
+
+        /* SUSUNAN TINGGI PODIUM (SEGITIGA) & WARNA CAHAYA BORDER/GLOW */
+        
+        /* Rank 2 (Kiri - Sedang) */
+        .fifa-rank-box.rank-2 {
+            border: 2px solid #c0c0c0;
+            padding: 15px 8px 12px 8px; /* Tinggi sedang */
+            box-shadow: 0 0 15px rgba(192, 192, 192, 0.4), inset 0 0 10px rgba(192, 192, 192, 0.1);
+        }
+
+        /* Juara 1 (Tengah - Paling Tinggi) */
+        .fifa-rank-box.rank-1 {
+            border: 2px solid #ffd700;
+            padding: 30px 8px 15px 8px; /* Paling tinggi biar ngebentuk puncak segitiga */
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.6), inset 0 0 15px rgba(255, 215, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Rank 3 (Kanan - Paling Rendah) */
+        .fifa-rank-box.rank-3 {
+            border: 2px solid #cd7f32;
+            padding: 8px 8px 8px 8px; /* Paling pendek */
+            box-shadow: 0 0 15px rgba(205, 127, 50, 0.4), inset 0 0 10px rgba(205, 127, 50, 0.1);
+        }
+
+        /* Badge Tulisan Rank */
+        .rank-badge {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+        .rank-1 .rank-badge { background: #ffd700; color: #000; box-shadow: 0 0 8px #ffd700; }
+        .rank-2 .rank-badge { background: #c0c0c0; color: #000; box-shadow: 0 0 8px #c0c0c0; }
+        .rank-3 .rank-badge { background: #cd7f32; color: #fff; box-shadow: 0 0 8px #cd7f32; }
+
+        /* Penyesuaian Konten Tim di Podium */
+        .fifa-rank-box .fifa-team {
+            justify-content: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: #fff;
+            gap: 5px;
+        }
+        .fifa-rank-box .fifa-team img {
+            width: 18px;
+            box-shadow: 0 0 4px rgba(255,255,255,0.2);
+        }
+    </style>
 	</head>
 	<body>
 
@@ -649,8 +693,10 @@
 
 	<div class="fifa-bracket-wrapper">
 		
+		<!-- SISI KIRI BAGAN -->
 		<div class="fifa-bracket-side fifa-left-side">
 			
+			<!-- 32 BESAR KIRI -->
 			<div class="fifa-round">
 				<div class="fifa-match-container">
 					<span class="fifa-match-code">M74</span>
@@ -718,6 +764,7 @@
 				</div>
 			</div>
 
+			<!-- 16 BESAR KIRI -->
 			<div class="fifa-round">
 				<div class="fifa-match-container">
 					<span class="fifa-match-code">M89</span>
@@ -753,6 +800,7 @@
 				</div>
 			</div>
 
+			<!-- PEREMPAT FINAL KIRI -->
 			<div class="fifa-round">
 				<div class="fifa-match-container">
 					<span class="fifa-match-code">M97</span>
@@ -772,6 +820,7 @@
 				</div>
 			</div>
 
+			<!-- SEMI FINAL KIRI -->
 			<div class="fifa-round">
 				<div class="fifa-match-container">
 					<span class="fifa-match-code">M101</span>
@@ -785,8 +834,26 @@
 
 		</div>
 
+		<!-- BAGIAN TENGAH (PODIUM SEGITIGA GLOW + FINAL + JUARA 3) -->
 		<div class="fifa-bracket-center">
 			
+			<!-- PODIUM FORMABENTUK SEGITIGA DENGAN EMISI CAHAYA NEON -->
+			<div class="fifa-rank-podium-center">
+				<div class="fifa-rank-box rank-2">
+					<div class="rank-badge">RANK 2</div>
+					<div class="fifa-team"><img src="-"> 20/07 02:00 WIB</div>
+				</div>
+				<div class="fifa-rank-box rank-1">
+					<div class="rank-badge">JUARA 1</div>
+					<div class="fifa-team"><img src="-"> 20/07 02:00 WIB</div>
+				</div>
+				<div class="fifa-rank-box rank-3">
+					<div class="rank-badge">RANK 3</div>
+					<div class="fifa-team"><img src="-"> 19/07 04:00 WIB</div>
+				</div>
+			</div>
+			
+			<!-- BOX KOTAK FINAL -->
 			<div class="fifa-center-box">
 				<h4>FINAL</h4>
 				<div class="fifa-match-box">
@@ -797,20 +864,91 @@
 				<span class="fifa-match-code">M104</span>
 			</div>
 
+			<!-- BOX PLAY-OFF JUARA 3 -->
 			<div class="fifa-center-box">
 				<h4>PLAY-OFF JUARA 3</h4>
 				<div class="fifa-match-box">
 					<div class="fifa-match-time">19/07 04:00 WIB</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/fr.png"> FRA</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
+					<div class="fifa-team"><img src="https://flagcdn.com/w20/fr.png"> FRA</div>
+					<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
 				</div>
 				<span class="fifa-match-code">M103</span>
 			</div>
 
 		</div>
 
+		<!-- SISI KANAN BAGAN -->
 		<div class="fifa-bracket-side fifa-right-side">
 			
+			<!-- SEMI FINAL KANAN -->
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M102</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">16/07 02:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ar.png"> ARG</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- PEREMPAT FINAL KANAN -->
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M99</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">12/07 04:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/no.png"> NOR</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M100</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">12/07 08:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ar.png"> ARG</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ch.png"> SUI</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 16 BESAR KANAN -->
+			<div class="fifa-round">
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M91</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">06/07 03:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/br.png"> BRA</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/no.png"> NOR</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M92</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">06/07 07:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/mx.png"> MEX</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M95</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">07/07 23:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ar.png"> ARG</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/eg.png"> EGY</div>
+					</div>
+				</div>
+				<div class="fifa-match-container">
+					<span class="fifa-match-code">M96</span>
+					<div class="fifa-match-box">
+						<div class="fifa-match-time">08/07 03:00 WIB</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/ch.png"> SUI</div>
+						<div class="fifa-team"><img src="https://flagcdn.com/w20/co.png"> COL</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 32 BESAR KANAN -->
 			<div class="fifa-round">
 				<div class="fifa-match-container">
 					<span class="fifa-match-code">M76</span>
@@ -877,156 +1015,12 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="fifa-round">
-				<div class="fifa-match-container">
-					<span class="fifa-match-code">M91</span>
-					<div class="fifa-match-box">
-						<div class="fifa-match-time">06/07 03:00 WIB</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/br.png"> BRA</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/no.png"> NOR</div>
-					</div>
-				</div>
-				<div class="fifa-match-container">
-					<span class="fifa-match-code">M92</span>
-					<div class="fifa-match-box">
-						<div class="fifa-match-time">06/07 07:00 WIB</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/mx.png"> MEX</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
-					</div>
-				</div>
-				<div class="fifa-match-container">
-					<span class="fifa-match-code">M95</span>
-					<div class="fifa-match-box">
-						<div class="fifa-match-time">07/07 23:00 WIB</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/ar.png"> ARG</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/eg.png"> EGY</div>
-					</div>
-				</div>
-				<div class="fifa-match-container">
-					<span class="fifa-match-code">M96</span>
-					<div class="fifa-match-box">
-						<div class="fifa-match-time">08/07 03:00 WIB</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/ch.png"> SUI</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/co.png"> COL</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="fifa-round">
-				<div class="fifa-match-container">
-					<span class="fifa-match-code">M99</span>
-					<div class="fifa-match-box">
-						<div class="fifa-match-time">12/07 04:00 WIB</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/no.png"> NOR</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
-					</div>
-				</div>
-				<div class="fifa-match-container">
-					<span class="fifa-match-code">M100</span>
-					<div class="fifa-match-box">
-						<div class="fifa-match-time">12/07 08:00 WIB</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/ar.png"> ARG</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/ch.png"> SUI</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="fifa-round">
-				<div class="fifa-match-container">
-					<span class="fifa-match-code">M102</span>
-					<div class="fifa-match-box">
-						<div class="fifa-match-time">16/07 02:00 WIB</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/gb-eng.png"> ENG</div>
-						<div class="fifa-team"><img src="https://flagcdn.com/w20/ar.png"> ARG</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 
 	</div>
 </div>
-		<div class="judul">JADWAL & PREDIKSI SCORE 17 JULI 2026</div>
+		<div class="judul">JADWAL & PREDIKSI SCORE 18 JULI 2026</div>
 
-<div class="match-card">
-    <div class="match-time">00:30 WIB</div>
-    <div class="match-team">FC Universitatea Cluj vs FC Dynamo Kiev</div>
-    <div class="match-league">Europa League Qualification</div>
-    <div class="match-score">Handicap: 0 : 1/2</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">01:00 WIB</div>
-    <div class="match-team">Derry City vs CSKA Sofia</div>
-    <div class="match-league">Europa League Qualification</div>
-    <div class="match-score">Handicap: 0 : 3/4</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">01:15 WIB</div>
-    <div class="match-team">Ferencvarosi TC vs FK Vojvodina</div>
-    <div class="match-league">Europa League Qualification</div>
-    <div class="match-score">Handicap: 1/2 : 0</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">01:30 WIB</div>
-    <div class="match-team">MSK Žilina vs Hajduk Split</div>
-    <div class="match-league">Europa League Qualification</div>
-    <div class="match-score">Handicap: 0 : 1/4</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">01:45 WIB</div>
-    <div class="match-team">FK Mornar Bar vs Athletic Club d'Escaldes</div>
-    <div class="match-league">Conference League Qualification</div>
-    <div class="match-score">Handicap: 0 : 1/4</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">01:45 WIB</div>
-    <div class="match-team">Linfield FC vs Nõmme Kalju</div>
-    <div class="match-league">Conference League Qualification</div>
-    <div class="match-score">Handicap: 1/4 : 0</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">02:00 WIB</div>
-    <div class="match-team">SS Virtus vs FC Dila Gori</div>
-    <div class="match-league">Conference League Qualification</div>
-    <div class="match-score">Handicap: 0 : 1 1/2</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">03:00 WIB</div>
-    <div class="match-team">IF Vestri vs Qarabag FK</div>
-    <div class="match-league">Europa League Qualification</div>
-    <div class="match-score">Handicap: 0 : 1 1/4</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">05:30 WIB</div>
-    <div class="match-team">Botafogo RJ vs Santos FC</div>
-    <div class="match-league">Brazil , Serie A</div>
-    <div class="match-score">Handicap: 1/2 : 0</div>
-</div>
-
-<div class="match-card">
-    <div class="match-time">05:30 WIB</div>
-    <div class="match-team">EC Vitoria BA vs Vasco de Gama</div>
-    <div class="match-league">Brazil , Serie A</div>
-    <div class="match-score">Handicap: 1/4 : 0</div>
-</div>
-
-<div style="clear: both; text-align: center; margin: 30px 0;">
-			<a href="https://pintarbola01.com/" target="_blank">
-				<img alt="Pintarbola Banner" height="99" src="https://images.linkcdn.cloud/V2/505/logo/logo-871244902.png" width="320" style="max-width:100%;" />
-			</a>
-		</div>
-
-<!-- JADWAL & PREDIKSI SCORE 18 JULI 2026 -->
-<div class="judul">JADWAL & PREDIKSI SCORE 18 JULI 2026</div>
 <div class="match-card">
     <div class="match-time">05:30 WIB</div>
     <div class="match-team">EC Bahia BA vs Chapecoense SC</div>
@@ -1071,7 +1065,7 @@
 
 <div style="clear: both; text-align: center; margin: 30px 0;">
 			<a href="https://pintarbola01.com/" target="_blank">
-				<img alt="Pintarbola Banner" height="99" src="https://blogger.googleusercontent.com/img/a/AVvXsEiDJ78cuoKSUGFSX9EtBfJZHdeKdKs_hkVJjU5vjFgJnUELsx5_8Q-i2DI4dHukypKA076SGTX_Z8yQEeTDvbIQhbueFCSjO59EPSuGXSodF8xs5uWWNvqd45klBeEGoOBixbNtWYRm_ZSdo7cErvq71OqwmRje7xGZ3dfbb--ZTGg4i_NRg5jA_dsHiEcA" width="320" style="max-width:100%;" />
+				<img alt="Pintarbola Banner" height="99" src="https://images.linkcdn.cloud/V2/505/logo/logo-871244902.png" width="320" style="max-width:100%;" />
 			</a>
 		</div>
 
@@ -1117,6 +1111,56 @@
     <div class="match-team">Prancis vs Inggris</div>
     <div class="match-league">🏆 FIFA World Cup , Match for 3rd Place 🏆</div>
     <div class="match-score">Handicap: 0 : 1/2</div>
+</div>
+
+<div style="clear: both; text-align: center; margin: 30px 0;">
+			<a href="https://pintarbola01.com/" target="_blank">
+				<img alt="Pintarbola Banner" height="99" src="https://blogger.googleusercontent.com/img/a/AVvXsEiDJ78cuoKSUGFSX9EtBfJZHdeKdKs_hkVJjU5vjFgJnUELsx5_8Q-i2DI4dHukypKA076SGTX_Z8yQEeTDvbIQhbueFCSjO59EPSuGXSodF8xs5uWWNvqd45klBeEGoOBixbNtWYRm_ZSdo7cErvq71OqwmRje7xGZ3dfbb--ZTGg4i_NRg5jA_dsHiEcA" width="320" style="max-width:100%;" />
+			</a>
+		</div>
+
+<!-- JADWAL & PREDIKSI SCORE 20 JULI 2026 -->
+<div class="judul">JADWAL & PREDIKSI SCORE 20 JULI 2026</div>
+<div class="match-card">
+    <div class="match-time">02:00 WIB</div>
+    <div class="match-team">Spanyol vs Argentina</div>
+    <div class="match-league">🏆 FIFA World Cup , Final 🏆</div>
+    <div class="match-score">Handicap: 0 : 1/4</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">05:00 WIB</div>
+    <div class="match-team">Connecticut United vs New York Red Bulls II</div>
+    <div class="match-league">MLS NEXT Pro , Usa</div>
+    <div class="match-score">Handicap: 1/2 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">07:00 WIB</div>
+    <div class="match-team">Sporting Kansas City II vs Minnesota United FC 2</div>
+    <div class="match-league">MLS NEXT Pro , Usa</div>
+    <div class="match-score">Handicap: 1 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">08:30 WIB</div>
+    <div class="match-team">Real Monarchs SLC vs Tacoma Defiance</div>
+    <div class="match-league">MLS NEXT Pro , Usa</div>
+    <div class="match-score">Handicap: 0 : 1/4</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">18:00 WIB</div>
+    <div class="match-team">Cambridge United vs Braintree Town</div>
+    <div class="match-league">Club Friendly Games</div>
+    <div class="match-score">Handicap: 1/4 : 0</div>
+</div>
+
+<div class="match-card">
+    <div class="match-time">23:00 WIB</div>
+    <div class="match-team">Lazio vs Lazio U20</div>
+    <div class="match-league">Club Friendly Games</div>
+    <div class="match-score">Handicap: 1/4 : 0</div>
 </div>
 	</div>
 
